@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+            http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--<context:property-placeholder location="classpath:db.properties"/>-->
+    <!-- 导入Druid配置-->
+    <context:property-placeholder location="classpath:db-druid.properties"/>
+    <context:component-scan base-package="cn.zjj"></context:component-scan>
+
+    <import resource="dataSource.xml"/>
+    <import resource="mybatis.xml"/>
+    <import resource="applicationContext-transaction.xml"/>
+    <!--<import resource="applicationContext-mvc.xml"/>-->
+
+
+  <!--  <bean id="personDao" class="cn.zjj.dao.PersonDaoImpl">
+        <property name="sqlSessionFactory" ref="sqlSessionFactory"/>
+    </bean>-->
+
+    <!--<bean id="countryDao" class="cn.zjj.dao.CountryDaoImpl">
+        <property name="sqlSessionFactory" ref="sqlSessionFactory"/>
+    </bean>-->
+</beans>

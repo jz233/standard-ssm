@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <!--  全局配置参数  -->
+    <settings>
+        <!-- 默认情况下延迟加载是关闭的, 两步打开(打开延迟加载，关闭积极加载) -->
+        <setting name="lazyLoadingEnabled" value="true"/>
+        <setting name="aggressiveLazyLoading" value="false"/>
+        <!-- 开启二级缓存 (默认就是true)-->
+        <setting name="cacheEnabled" value="true"/>
+        <!-- 日志 -->
+        <!--<setting name="logImpl" value="LOG4J"/>-->
+    </settings>
+
+    <!--  别名  -->
+    <!--<typeAliases>-->
+        <!--<package name="cn.zjj.entity"/>-->
+    <!--</typeAliases>-->
+
+
+    <!--    加载映射文件    -->
+    <!--<mappers>-->
+        <!--<package name="zjj.shiro.mappers"/>-->
+    <!--</mappers>-->
+
+    <!-- 自定义插件 -->
+    <!--<plugins>-->
+        <!--<plugin interceptor="cn.zjj.db.TestPlugin">-->
+            <!--<property name="dialect" value="mysql"/>-->
+        <!--</plugin>-->
+    <!--</plugins>-->
+
+</configuration>

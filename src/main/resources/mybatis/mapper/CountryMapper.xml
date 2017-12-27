@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.zjj.dao.CountryMapper">
+    <sql id="Base_Column_List">
+        Code, Name, Continent, Region, SurfaceArea,
+        IndepYear, Population, LifeExpectancy, GNP,
+        GNPOld, LocalName, GovernmentForm, HeadOfState,
+        Capital,Code2
+    </sql>
+    <select id="getAllCountries" resultType="country">
+        SELECT *
+        <!--<include refid="Base_Column_List"/>-->
+        FROM country
+    </select>
+</mapper>
